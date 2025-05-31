@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.common</groupId>
 	<artifactId>common</artifactId>
-	<version>0.0.1</version>
+	<version>v1.0.0</version>
 	<name>common</name>
 	<packaging>jar</packaging>
 	<description>common project</description>
