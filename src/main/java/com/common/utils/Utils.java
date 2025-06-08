@@ -1,5 +1,7 @@
 package com.common.utils;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
 
 import java.time.LocalDateTime;
@@ -119,5 +121,11 @@ public class Utils {
         }
         return years;
     }
+	
+	  public static double formatTwoDecimal(double value) {
+	        return BigDecimal.valueOf(value)
+	                         .setScale(2, RoundingMode.HALF_UP)
+	                         .doubleValue();
+	    }
 
 }
