@@ -5,54 +5,32 @@
  */
 package com.common.dto;
 
+import java.io.Serializable;
 import java.util.List;
+
+import lombok.Data;
 
 /**
  * The Class ResponseDto.
  */
-public class ResponseDto {
+@Data
+public class ResponseDto implements Serializable {
 
-  /** The entity id. */
-  private String entityId;
+	private static final long serialVersionUID = 1L;
 
-  /** The error message. */
-  private List<String> errorMessage;
+	/** The entity id. */
+	private String entityId;
 
-  /** The row number. */
-  private int rowNumber;
+	/** The error message. */
+	private List<String> errorMessage;
 
-  public String getEntityId() {
-    return entityId;
-  }
+	/** The row number. */
+	private int rowNumber;
 
-  public void setEntityId(String entityId) {
-    this.entityId = entityId;
-  }
-
-  public List<String> getErrorMessage() {
-    return errorMessage;
-  }
-
-  public void setErrorMessage(List<String> errorMessage) {
-    this.errorMessage = errorMessage;
-  }
-
-  public int getRowNumber() {
-    return rowNumber;
-  }
-
-  public void setRowNumber(int rowNumber) {
-    this.rowNumber = rowNumber;
-  }
-
-  /**
-   * To string.
-   *
-   * @return the string
-   */
-  @Override
-  public String toString() {
-    return "ResponseDto [entityId=" + entityId + ", errorMessage=" + errorMessage + ", rowNumber=" + rowNumber + "]";
-  }
+	@Override
+	public String toString() {
+		return "ResponseDto [entityId=" + entityId + ", errorMessage=" + errorMessage + ", rowNumber=" + rowNumber
+				+ "]";
+	}
 
 }
